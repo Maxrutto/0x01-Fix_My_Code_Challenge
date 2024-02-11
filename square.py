@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+This class defines a square with its attributes
+"""
 class square():
     
     width = 0
@@ -7,6 +9,8 @@ class square():
 
     
     def __init__(self, *args, **kwargs):
+        """ This instantiates the square object with attributes
+        """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -15,9 +19,13 @@ class square():
         return self.width * self.width
 
     def PermiterOfMySquare(self):
+        """ Method that finds the square perimeter
+        """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """ This prints a string representation of the object
+        """
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
